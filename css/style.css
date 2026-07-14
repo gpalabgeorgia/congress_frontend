@@ -89,10 +89,13 @@ body {
 }
 .header__wrap {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    justify-content: space-between;
     width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 25px 40px 15px 15px;
+    position: relative;
 }
 .logo {
     display: flex;
@@ -119,7 +122,8 @@ body {
 .navigation__list {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: clamp(12px, 1.8vw, 24px);
+    align-items: center;
 }
 .navigation__link {
     text-decoration: none;
@@ -127,10 +131,109 @@ body {
     font-weight: 500;
     font-size: 0.95rem;
     transition: var(--transition);
+    white-space: nowrap;
 }
 .navigation__link:hover,
 .navigation__link--active {
     color: var(--color-primary);
+}
+.header__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__top-bar {
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header__social-link {
+    color: #1b1b1b;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.header__social-link:hover {
+    color: var(--color-primary);
+}
+.header__divider {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    user-select: none;
+}
+.header__lang {
+    position: relative;
+    display: inline-block;
+}
+.header__lang-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #1b1b1b;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header__lang-toggle:hover {
+    color: var(--color-primary);
+}
+.header__lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 6px 0;
+    min-width: 110px;
+    z-index: 1010;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.2s ease-in-out;
+}
+.header__lang:hover .header__lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.header__lang-item {
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-dark);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.header__lang-item:hover {
+    background-color: var(--color-light-bg);
+    color: var(--color-primary);
+}
+.header__lang-item.active {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+.header__action {
+    display: flex;
+    align-items: center;
 }
 /* ==========================================================================
    4. მთავარი ბანერი (HERO-PREMIUM)
@@ -246,7 +349,6 @@ a.hero-features__item:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 /* ==========================================================================
    5. ბარათების ბადე (FEATURES)
    ========================================================================== */
@@ -315,36 +417,31 @@ a.hero-features__item:hover {
     text-decoration: none;
     font-weight: 600;
 }
+
 /* ==========================================================================
    7. ადაფტიურობა (MEDIA QUERIES)
-   ========================================================================== */
-/* ==========================================================================
-   7. АДАПТИВНОСТЬ (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 1200px) {
     .hero-features {
         gap: 40px;
     }
 }
-
-/* --- [НОВЫЙ ДИАПАЗОН] ИСКЛЮЧИТЕЛЬНО ДЛЯ ПЛАНШЕТОВ (от 769px до 1024px) --- */
+/* --- [ახალი დიაპაზონი] გამონაკლისად პლანშეტებისთვის (769px-დან 1024px-მდე) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero-premium {
         height: 100vh;
         min-height: 600px;
         padding-top: 150px;
     }
-
-    /* Сдвигаем иконки на планшетах влево, сажаем на волну и сжимаем расстояние */
     .hero-features {
-        gap: 20px;                  /* Плотнее друг к другу */
+        gap: 20px;
         flex-wrap: nowrap !important;
-        margin-bottom: 25px;        /* Опустили ниже на красную ленту */
-        margin-left: -25px;         /* Сдвинули влево, чтобы влезли */
+        margin-bottom: 25px;
+        margin-left: -25px;
         padding-left: 0;
     }
     .hero-features__icon {
-        width: 32px;                /* Оптимальный размер для планшетов */
+        width: 32px;
         height: 32px;
     }
     .hero-features__label {
@@ -353,7 +450,7 @@ a.hero-features__item:hover {
     }
 }
 
-/* --- ВСЕ ЧТО НИЖЕ 992px (для общей сетки и текста) --- */
+/* --- ყველაფერი რაც 992px-ზე ნაკლებია --- */
 @media (max-width: 992px) {
     .features__grid {
         grid-template-columns: 1fr;
@@ -369,8 +466,7 @@ a.hero-features__item:hover {
         font-size: 1.6rem;
     }
 }
-
-/* --- ДЛЯ МОБИЛЬНЫХ (ДО 768px) — ОСТАЛОСЬ БЕЗ ИЗМЕНЕНИЙ --- */
+/* --- მობილურებისთვის (768px-მდე) --- */
 @media (max-width: 768px) {
     .header {
         position: relative;
@@ -393,7 +489,6 @@ a.hero-features__item:hover {
     .logo__img {
         height: 100px;
     }
-
     .hero-premium {
         padding-top: 20px;
         min-height: 550px;
@@ -411,8 +506,6 @@ a.hero-features__item:hover {
     .hero-content__desc {
         font-size: 0.95rem;
     }
-
-    /* Мобильные настройки, которые мы настроили ранее */
     .hero-features {
         gap: 12px;
         flex-wrap: nowrap !important;
@@ -429,9 +522,8 @@ a.hero-features__item:hover {
         letter-spacing: 0.3px;
     }
 }
-
 @media (max-width: 480px) {
-    /* Очень маленькие экраны — без изменений */
+    /* ძალიან პატარა ეკრანები */
     .hero-features {
         gap: 8px;
         margin-bottom: -5px;
@@ -445,66 +537,58 @@ a.hero-features__item:hover {
         font-size: 0.55rem;
     }
 }
-/* Настройки СТРОГО для планшетов от 769px до 1024px */
+/* დაყენებები მკაცრად პლანშეტებისთვის 769px-დან 1024px-მდე */
 @media (min-width: 768.1px) and (max-width: 1024px) {
     .hero-features {
         gap: 25px !important;
         margin-left: -20px !important;
-        margin-bottom: 12px !important; /* Опустили чуть-чуть ниже, ровно на красную ленту */
+        margin-bottom: 12px !important;
         flex-wrap: nowrap !important;
     }
-
     .hero-features__icon {
         width: 32px !important;
         height: 32px !important;
     }
-
     .hero-features__label {
         font-size: 0.7rem !important;
     }
 }
-/* Корректировка текстов СТРОГО для диапазона от 992px до 1024px */
+/* ტექსტების კორექტირება ბანერზე მკაცრად დიაპაზონისთვის 992px-დან 1024px-მდე */
 @media (min-width: 992px) and (max-width: 1024px) {
     .hero-content {
-        max-width: 620px !important; /* Ограничиваем ширину, чтобы текст не лез на флаг */
+        max-width: 620px !important;
     }
-
     .hero-content__title {
-        font-size: 2.3rem !important; /* Слегка уменьшаем главный заголовок */
+        font-size: 2.3rem !important;
         line-height: 1.2 !important;
         margin-bottom: 10px !important;
     }
-
     .hero-content__subtitle {
-        font-size: 1.6rem !important; /* Уменьшаем красный подзаголовок */
+        font-size: 1.6rem !important;
         line-height: 1.3 !important;
         margin-bottom: 15px !important;
     }
-
     .hero-content__divider {
-        margin-bottom: 15px !important; /* Делаем отступы компактнее */
+        margin-bottom: 15px !important;
     }
-
     .hero-content__desc {
-        font-size: 1.1rem !important; /* Уменьшаем нижнее описание */
+        font-size: 1.1rem !important;
         line-height: 1.4 !important;
     }
 }
-/* Настройки для экранов ноутбуков от 1024.1px до 1295px */
+/* დაყენებები ლეპტოპების ეკრანებისთვის 1024.1px-დან 1295px-მდე */
 @media (min-width: 1024.1px) and (max-width: 1295px) {
     .hero-features {
-        gap: 30px !important;         /* Сжимаем расстояние, чтобы удержать иконки на красной ленте */
-        margin-left: -20px !important;  /* Слегка сдвигаем влево */
-        margin-bottom: 25px !important; /* Удерживаем идеальную высоту на волне */
+        gap: 30px !important;
+        margin-left: -20px !important;
+        margin-bottom: 25px !important;
         flex-wrap: nowrap !important;
     }
-
     .hero-features__icon {
-        width: 36px !important;       /* Оптимальный размер иконки */
+        width: 36px !important;
         height: 36px !important;
     }
-
     .hero-features__label {
-        font-size: 0.75rem !important; /* Компактный размер текста */
+        font-size: 0.75rem !important;
     }
 }

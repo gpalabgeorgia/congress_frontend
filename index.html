@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgian Worldwide Congress</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-<!-- Шапка с эффектом размытия заднего фона (Blur) -->
+<!-- ქუდი დაბინდული ფონის ეფექტით (Blur) -->
 <header class="header">
     <div class="container header__wrap">
         <div class="logo">
@@ -25,17 +26,49 @@
                 <li><a href="#" class="navigation__link">კონტაქტი</a></li>
             </ul>
         </nav>
-        <div class="header__action">
-            <a href="#" class="btn btn--outline">შესვლა</a>
+        <div class="header__right">
+            <!-- Блок соцсетей и языка, который в будущем будет наполняться из админки -->
+            <div class="header__top-bar">
+                <div class="header__socials">
+                    <!-- Ссылки и иконки для динамического вывода -->
+                    <a href="https://facebook.com" class="header__social-link" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://youtube.com" class="header__social-link" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com" class="header__social-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+                <!-- Разделитель -->
+                <span class="header__divider">|</span>
+                <!-- Глобус переключения языков с выпадающим списком -->
+                <div class="header__lang">
+                    <button class="header__lang-toggle" aria-label="Language">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <ul class="header__lang-dropdown">
+                        <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                        <li><a href="#" class="header__lang-item">English</a></li>
+                        <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Твой оригинальный блок с кнопкой войти -->
+            <div class="header__action">
+                <a href="#" class="btn btn--outline">შესვლა</a>
+            </div>
         </div>
     </div>
 </header>
-
 <main>
-    <!-- Премиальный Hero-блок с видео/фото подложкой -->
+    <!-- პრემიალური Hero-ბლოკი ვიდეო-ფოტო ყდით -->
     <section class="hero-premium">
         <div class="hero-premium__container">
-            <!-- Текстовый блок -->
+            <!-- ტექსტური ბლოკი -->
             <div class="hero-content">
                 <h1 class="hero-content__title">
                     DISTANTES NO MAPA,<br>
@@ -45,18 +78,14 @@
                     A GEÓRGIA É A NOSSA RAIZ,<br>
                     O REGRESSO É A NOSSA ESPERANÇA.
                 </p>
-
-                <!-- Красная разделительная линия -->
+                <!-- წითელი გამყოფი ხაზი -->
                 <div class="hero-content__divider"></div>
-
                 <p class="hero-content__desc">
                     POR UMA GEÓRGIA FORTE,<br>
                     LIVRE E PRÓSPERA.
                 </p>
             </div>
-
-            <!-- Блок иконок на красной плашке -->
-            <!-- Блок динамических иконок-ссылок -->
+            <!-- დინამიური აიქონი ბმულების ბლოკი -->
             <div class="hero-features">
                 <a href="#unidade" class="hero-features__item">
                     <div class="hero-features__icon">
@@ -64,28 +93,24 @@
                     </div>
                     <span class="hero-features__label">UNIDADE</span>
                 </a>
-
                 <a href="#cultura" class="hero-features__item">
                     <div class="hero-features__icon">
                         <img src="images/icons/cultura.png" alt="Cultura" class="hero-features__img">
                     </div>
                     <span class="hero-features__label">CULTURA</span>
                 </a>
-
                 <a href="#heranca" class="hero-features__item">
                     <div class="hero-features__icon">
                         <img src="images/icons/life.png" alt="Life" class="hero-features__img">
                     </div>
                     <span class="hero-features__label">HERANÇA</span>
                 </a>
-
                 <a href="#esperanca" class="hero-features__item">
                     <div class="hero-features__icon">
                         <img src="images/icons/sun.png" alt="Sun Icon" class="hero-features__img">
                     </div>
                     <span class="hero-features__label">ESPERANÇA</span>
                 </a>
-
                 <a href="#regresso" class="hero-features__item">
                     <div class="hero-features__icon">
                         <img src="images/icons/geo.png" alt="Georgia map" class="hero-features__img">
@@ -95,35 +120,29 @@
             </div>
         </div>
     </section>
-
-    <!-- Блок визуальных карточек (Направления деятельности) -->
+    <!-- ვიზულაური ბარათების ბლოკი (მოღვაწეობის მიმართულებები) -->
     <section class="features">
         <div class="container">
             <div class="features__grid">
-
                 <div class="card">
                     <div class="card__icon">🌐</div>
                     <h3 class="card__title">გლობალური ქსელი</h3>
                     <p class="card__text">კონტაქტების დამყარება და თანამშრომლობა მსოფლიოს ნებისმიერ წერტილში მცხოვრებ თანამემამულეებთან.</p>
                 </div>
-
                 <div class="card">
                     <div class="card__icon">🏛️</div>
                     <h3 class="card__title">კულტურული მემკვიდრეობა</h3>
                     <p class="card__text">ქართული ენის, ისტორიისა და თვითმყოფადობის შენარჩუნება და პოპულარიზაცია საზღვარგარეთ.</p>
                 </div>
-
                 <div class="card">
                     <div class="card__icon">📈</div>
                     <h3 class="card__title">განვითარება და მხარდაჭერა</h3>
                     <p class="card__text">ერთობლივი საგანმანათლებლო, საქველმოქმედო და ბიზნეს-პროექტების რეალიზაცია.</p>
                 </div>
-
             </div>
         </div>
     </section>
 </main>
-
 <footer class="footer">
     <div class="container footer__wrap">
         <div class="footer__brand">
