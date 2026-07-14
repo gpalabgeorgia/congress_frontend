@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         nav.classList.toggle('active');
-        // Запрещаем скролл страницы при открытом меню
+        // ვკრძალავთ გვერდის სქროლს გახსნილი მენიუს დროს
         document.body.classList.toggle('no-scroll');
     });
 
-    // Закрываем меню при клике на любую ссылку
+    // ვხურავთ მენიუს ნებისმიერ ბმულზე დაწკაპებისას
     const navLinks = document.querySelectorAll('.navigation__link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {

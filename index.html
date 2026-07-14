@@ -11,7 +11,7 @@
 <!-- ქუდი დაბინდული ფონის ეფექტით (Blur) -->
 <header class="header">
     <div class="header__wrap">
-        <!-- Логотип -->
+        <!-- ლოგო -->
         <a href="#" class="logo">
             <img src="images/logo.png" alt="Logo" class="logo__img">
             <div class="logo__text">
@@ -19,8 +19,7 @@
                 <span class="logo__subtitle">ქართველთა მსოფლიო კონგრესი</span>
             </div>
         </a>
-
-        <!-- Навигация (обернули в класс header__nav для удобства анимации) -->
+        <!-- ნავიგაცია -->
         <nav class="header__nav">
             <ul class="navigation__list">
                 <li><a href="#" class="navigation__link navigation__link--active">მთავარი</a></li>
@@ -28,15 +27,13 @@
                 <li><a href="#" class="navigation__link">ინიციატივები</a></li>
                 <li><a href="#" class="navigation__link">კონტაქტი</a></li>
             </ul>
-
-            <!-- Блок, который будет отображаться только в мобильной версии меню -->
+            <!-- ბლოკი, რომელიც გამოსახული იქნება მხოლოდ მენიუს მობილურ ვერსიაში -->
             <div class="header__menu-mobile-meta">
                 <div class="header__socials">
                     <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
-
                 <div class="header__lang">
                     <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i> ქართული</button>
                     <ul class="header__lang-dropdown">
@@ -47,8 +44,7 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Правая часть (соцсети, язык, кнопка для десктопов) -->
+        <!-- მარჯვენა ნაწილი (სოც.ქსელები, ენა, ღილაკი დესკტოპებისთვის) -->
         <div class="header__right">
             <div class="header__top-bar">
                 <div class="header__socials">
@@ -70,8 +66,7 @@
                 <a href="#" class="btn btn--outline">შესვლა</a>
             </div>
         </div>
-
-        <!-- Кнопка бургер-меню -->
+        <!-- ბურგერ-მენიუს ღილაკი -->
         <button class="header__burger" aria-label="Toggle menu">
             <span></span>
             <span></span>
@@ -139,21 +134,54 @@
     <section class="features">
         <div class="container">
             <div class="features__grid">
-                <div class="card">
-                    <div class="card__icon">🌐</div>
+
+                <!-- Карточка 1 -->
+                <a href="#" class="card card--network">
+                    <div class="card__background-flag"></div>
+                    <div class="card__icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
                     <h3 class="card__title">გლობალური ქსელი</h3>
                     <p class="card__text">კონტაქტების დამყარება და თანამშრომლობა მსოფლიოს ნებისმიერ წერტილში მცხოვრებ თანამემამულეებთან.</p>
-                </div>
-                <div class="card">
-                    <div class="card__icon">🏛️</div>
+                    <div class="card__action">
+                        <span>გაიგე მეტი</span>
+                    </div>
+                </a>
+
+                <!-- Карточка 2 -->
+                <a href="#" class="card card--culture">
+                    <div class="card__background-flag"></div>
+                    <div class="card__icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M3 22h18M5 10v10M9 10v10M15 10v10M19 10v10M12 2L2 7v3h20V7L12 2z"/>
+                        </svg>
+                    </div>
                     <h3 class="card__title">კულტურული მემკვიდრეობა</h3>
                     <p class="card__text">ქართული ენის, ისტორიისა და თვითმყოფადობის შენარჩუნება და პოპულარიზაცია საზღვარგარეთ.</p>
-                </div>
-                <div class="card">
-                    <div class="card__icon">📈</div>
+                    <div class="card__action">
+                        <span>გაიგე მეტი</span>
+                    </div>
+                </a>
+
+                <!-- Карточка 3 -->
+                <a href="#" class="card card--growth">
+                    <div class="card__background-flag"></div>
+                    <div class="card__icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3 class="card__title">განვითარება და მხარდაჭერა</h3>
                     <p class="card__text">ერთობლივი საგანმანათლებლო, საქველმოქმედო და ბიზნეს-პროექტების რეალიზაცია.</p>
-                </div>
+                    <div class="card__action">
+                        <span>გაიგე მეტი</span>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
