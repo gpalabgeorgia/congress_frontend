@@ -851,3 +851,159 @@ a.hero-features__item:hover {
         font-size: 0.75rem !important;
     }
 }
+/* ==========================================================================
+   6. ვიდეო სექცია (VIDEO SECTION)
+   ========================================================================== */
+.video-section {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    min-height: 550px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #DB1B1B;
+}
+.video-section__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 12% 60px 6%;
+    background-color: #DB1B1B;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
+}
+.video-section__bg-map {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    width: 95%;
+    height: 85%;
+    background-image: url('../images/world-map-white.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 1;
+}
+.video-section__text-wrapper {
+    max-width: 500px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 3;
+}
+.video-section__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+.video-section__text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+.video-section__media {
+    position: relative;
+    width: 115%;
+    height: 100%;
+    margin-left: -15%;
+    z-index: 1;
+}
+.video-section__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ==========================================
+   ადაფტიურობა
+   ========================================== */
+@media (max-width: 991px) {
+    .video-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    .video-section__content {
+        padding: 60px 30px;
+        clip-path: none;
+    }
+    .video-section__bg-map {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-position: center;
+        opacity: 0.15;
+    }
+    .video-section__title {
+        font-size: 1.8rem;
+    }
+    .video-section__media {
+        height: 350px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+/* ==========================================================================
+   დაყენებული ღილაკი PLAY/PAUSE (YOUTUBE STYLE)
+   ========================================================================== */
+.video-control-btn {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 74px;
+    height: 74px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.video-control-btn svg {
+    width: 32px;
+    height: 32px;
+}
+.video-control-btn .icon-play {
+    transform: translateX(2px);
+}
+.video-control-btn:hover {
+    background-color: #DB1B1B;
+    border-color: #DB1B1B;
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(219, 27, 27, 0.4);
+}
+.video-section__media.is-playing .video-control-btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+.video-section__media.is-playing:hover .video-control-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+/* ადაფტიურობა მობილურებისთვის */
+@media (max-width: 991px) {
+    .video-control-btn {
+        left: 50%;
+        width: 60px;
+        height: 60px;
+    }
+    .video-control-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+}

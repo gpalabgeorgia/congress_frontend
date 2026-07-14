@@ -134,8 +134,7 @@
     <section class="features">
         <div class="container">
             <div class="features__grid">
-
-                <!-- Карточка 1 -->
+                <!-- ბარათი 1 -->
                 <a href="#" class="card card--network">
                     <div class="card__background-flag"></div>
                     <div class="card__icon-box">
@@ -151,8 +150,7 @@
                         <span>გაიგე მეტი</span>
                     </div>
                 </a>
-
-                <!-- Карточка 2 -->
+                <!-- ბარათი 2 -->
                 <a href="#" class="card card--culture">
                     <div class="card__background-flag"></div>
                     <div class="card__icon-box">
@@ -166,8 +164,7 @@
                         <span>გაიგე მეტი</span>
                     </div>
                 </a>
-
-                <!-- Карточка 3 -->
+                <!-- ბარათი 3 -->
                 <a href="#" class="card card--growth">
                     <div class="card__background-flag"></div>
                     <div class="card__icon-box">
@@ -181,8 +178,48 @@
                         <span>გაიგე მეტი</span>
                     </div>
                 </a>
-
             </div>
+        </div>
+    </section>
+    <!-- ==========================================================================
+   6. ვიდეო სექცია (VIDEO SECTION)
+   ========================================================================== -->
+    <section class="video-section">
+        <!-- Левая текстовая часть -->
+        <div class="video-section__content">
+            <!-- Карта мира теперь привязана к границам текста, а не ко всему скошенному блоку -->
+            <div class="video-section__bg-map"></div>
+
+            <div class="video-section__text-wrapper">
+                <h2 class="video-section__title">კონგრესის ვიდეო პრეზენტაცია</h2>
+                <p class="video-section__text">
+                    მოკლე აღწერა ვიდეო რგოლის შესახებ, რომელიც განთავსებულია მარჯვნივ. აქ შეგიძლიათ დაამატოთ ინფორმაცია იმის შესახებ, თუ რას ეხება ეს ვიდეო, რა არის მისი მთავარი გზავნილი და რატომ არის მნიშვნელოვანი ჩვენი კონგრესის თითოეული წევრისთვის.
+                </p>
+            </div>
+        </div>
+
+        <!-- Правая часть с видео -->
+        <div class="video-section__media">
+            <video class="video-section__video" id="promo-video" playsinline poster="images/poster.jpg">
+                <source src="videos/example.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Кастомная кнопка управления -->
+            <button class="video-control-btn" id="video-control-btn" aria-label="Play video">
+                <!-- Иконка Play -->
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <!-- Иконка Pause -->
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+                <!-- Иконка Replay (круговая стрелка) -->
+                <svg class="icon-replay" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                    <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                </svg>
+            </button>
         </div>
     </section>
 </main>
