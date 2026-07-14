@@ -185,11 +185,9 @@
    6. ვიდეო სექცია (VIDEO SECTION)
    ========================================================================== -->
     <section class="video-section">
-        <!-- Левая текстовая часть -->
+        <!-- მარცხენა ტექსტური ბლოკი -->
         <div class="video-section__content">
-            <!-- Карта мира теперь привязана к границам текста, а не ко всему скошенному блоку -->
             <div class="video-section__bg-map"></div>
-
             <div class="video-section__text-wrapper">
                 <h2 class="video-section__title">კონგრესის ვიდეო პრეზენტაცია</h2>
                 <p class="video-section__text">
@@ -197,29 +195,104 @@
                 </p>
             </div>
         </div>
-
-        <!-- Правая часть с видео -->
+        <!-- მარჯვენა ნაწილი ვიდეოთი -->
         <div class="video-section__media">
             <video class="video-section__video" id="promo-video" playsinline poster="images/poster.jpg">
                 <source src="videos/example.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
-            <!-- Кастомная кнопка управления -->
+            <!-- ვიდეოს მართვის ღილაკი -->
             <button class="video-control-btn" id="video-control-btn" aria-label="Play video">
-                <!-- Иконка Play -->
+                <!-- აიქონი Play -->
                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z"/>
                 </svg>
-                <!-- Иконка Pause -->
+                <!-- აიქონი Pause -->
                 <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
                     <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
                 </svg>
-                <!-- Иконка Replay (круговая стрелка) -->
+                <!-- აიქონი Replay -->
                 <svg class="icon-replay" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
                     <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
                 </svg>
             </button>
+        </div>
+    </section>
+    <!-- ==========================================================================
+   7. ღონისძიებების სლაიდერი (EVENTS SLIDER)
+   ========================================================================== -->
+    <section class="events-section">
+        <div class="events-container">
+            <!-- Заголовок секции -->
+            <h2 class="events-section-title">ჩვენი ღონისძიებები</h2>
+
+            <div class="slider-wrapper">
+                <!-- Стрелка влево -->
+                <button class="slider-arrow prev-arrow" id="slider-prev" aria-label="Предыдущий слайд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Окно слайдера -->
+                <div class="events-slider-track" id="events-slider-track">
+
+                    <!-- Карточка 1 -->
+                    <div class="event-card">
+                        <div class="event-card__image-wrapper">
+                            <img src="images/events/event-1.jpg" alt="Event 1" class="event-card__image">
+                        </div>
+                        <h3 class="event-card__title">ბიზნეს ფორუმი თბილისში</h3>
+                        <a href="#" class="event-card__link">დეტალურად →</a>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="event-card">
+                        <div class="event-card__image-wrapper">
+                            <img src="images/events/event-2.jpg" alt="Event 2" class="event-card__image">
+                        </div>
+                        <h3 class="event-card__title">კულტურული მემკვიდრეობის საღამო</h3>
+                        <a href="#" class="event-card__link">დეტალურად →</a>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="event-card">
+                        <div class="event-card__image-wrapper">
+                            <img src="images/events/event-3.jpg" alt="Event 3" class="event-card__image">
+                        </div>
+                        <h3 class="event-card__title">საქველმოქმედო გალა ვახშამი</h3>
+                        <a href="#" class="event-card__link">დეტალურად →</a>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="event-card">
+                        <div class="event-card__image-wrapper">
+                            <img src="images/events/event-4.jpg" alt="Event 4" class="event-card__image">
+                        </div>
+                        <h3 class="event-card__title">ახალგაზრდული კონგრესი 2026</h3>
+                        <a href="#" class="event-card__link">დეტალურად →</a>
+                    </div>
+
+                    <!-- Карточка 5 -->
+                    <div class="event-card">
+                        <div class="event-card__image-wrapper">
+                            <img src="images/events/event-5.jpg" alt="Event 5" class="event-card__image">
+                        </div>
+                        <h3 class="event-card__title">საინვესტიციო პანელი</h3>
+                        <a href="#" class="event-card__link">დეტალურად →</a>
+                    </div>
+
+                </div>
+
+                <!-- Стрелка вправо -->
+                <button class="slider-arrow next-arrow" id="slider-next" aria-label="Следующий слайд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 </main>

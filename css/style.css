@@ -1007,3 +1007,199 @@ a.hero-features__item:hover {
         height: 24px;
     }
 }
+/* ==========================================================================
+   7. ღონისძიებების სლაიდერი (EVENTS SLIDER)
+   ========================================================================== */
+.events-section {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    overflow: hidden;
+}
+
+.events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовок секции */
+.events-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111111;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
+}
+
+/* Оболочка слайдера со стрелками */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Трек слайдера (скролл-контейнер) */
+.events-slider-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px 5px;
+
+    /* Скрываем скроллбар в Webkit (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+}
+
+.events-slider-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Карточка мероприятия */
+.event-card {
+    flex: 0 0 calc((100% - 60px) / 3); /* Ровно 3 карточки */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+
+    /* Красивая тонкая рамка вокруг всей карточки */
+    border: 1px solid #EAEAEA;
+    padding: 20px;
+    border-radius: 8px; /* Легкое, современное скругление углов */
+
+    /* Плавный переход для всех эффектов выделения */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+.event-card:hover {
+    border-color: #DB1B1B; /* Рамка окрашивается в наш красный */
+    transform: translateY(-6px); /* Карточка изящно приподнимается */
+    box-shadow: 0 12px 30px rgba(219, 27, 27, 0.08); /* Мягкое красное свечение снизу */
+}
+
+/* Контейнер для фото */
+.event-card__image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ровный квадрат */
+    overflow: hidden;
+    background-color: #F5F5F7;
+    border-radius: 4px; /* Внутреннее скругление для фото */
+    margin-bottom: 20px;
+}
+
+.event-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Эффект приближения фото при наведении на карточку */
+.event-card:hover .event-card__image {
+    transform: scale(1.04);
+}
+
+.event-card:hover .event-card__image-wrapper {
+    border-color: #DB1B1B;
+}
+
+/* Название мероприятия под фото */
+.event-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8em;
+    transition: color 0.3s ease;
+}
+.event-card:hover .event-card__title {
+    color: #DB1B1B;
+}
+
+/* Ссылка "Детально" */
+.event-card__link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111; /* В обычном состоянии спокойный темный */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto; /* Прижимает ссылку к низу карточки */
+    transition: all 0.3s ease;
+}
+
+.event-card:hover .event-card__link {
+    color: #DB1B1B;
+    transform: translateX(4px);
+}
+
+/* Стилизация стрелок навигации */
+.slider-arrow {
+    flex: 0 0 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid #E5E5E5;
+    background-color: #FFFFFF;
+    color: #111111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.slider-arrow svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на стрелки */
+.slider-arrow:hover {
+    border-color: #DB1B1B;
+    background-color: #DB1B1B;
+    color: #FFFFFF;
+}
+
+.prev-arrow:hover svg {
+    transform: translateX(-2px);
+}
+
+.next-arrow:hover svg {
+    transform: translateX(2px);
+}
+
+/* Адаптивность */
+@media (max-width: 991px) {
+    .event-card {
+        flex: 0 0 calc((100% - 30px) / 2); /* 2 карточки на планшетах */
+    }
+    .events-section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .event-card {
+        flex: 0 0 85%; /* 1 полная карточка + хвостик следующей для свайпа */
+    }
+    .slider-arrow {
+        display: none; /* На мобильных удобнее листать пальцем (свайпом) */
+    }
+    .slider-wrapper {
+        gap: 0;
+    }
+}

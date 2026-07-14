@@ -29,20 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconPause = playBtn.querySelector(".icon-pause");
     const iconReplay = playBtn.querySelector(".icon-replay");
 
-    // Функция переключения состояния Play / Pause / Replay
+    // Play / Pause / Replay მდგომარეობის გადართვის ფუნქცია
     function togglePlay() {
-        // Если видео закончилось — запускаем сначала
+        // თუ ვიდეო დასრულდა — ვუშვებთ თავიდან
         if (video.ended) {
             video.currentTime = 0;
             video.play();
             showPauseIcon();
         }
-        // Если видео стоит на паузе — запускаем
+        // თუ ვიდეო პაუზაზეა — ვუშვებთ
         else if (video.paused) {
             video.play();
             showPauseIcon();
         }
-        // Если видео играет — ставим на паузу
+        // თუ ვიდეო მიდის — ვაყენებთ პაუზაზე
         else {
             video.pause();
             showPlayIcon();
@@ -64,22 +64,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showReplayIcon() {
-        mediaContainer.classList.remove("is-playing"); // Кнопка должна всегда гореть в центре
+        mediaContainer.classList.remove("is-playing");
         iconPlay.style.display = "none";
         iconPause.style.display = "none";
         iconReplay.style.display = "block";
     }
 
-    // Слушатель окончания видео
+    // ვიდეოს დასასრულის თვალთვალი
     video.addEventListener("ended", () => {
         showReplayIcon();
     });
 
-    // Клики на кнопку и само видео
+    // ღილაკზე და ვიდეოზე წკაპი
     playBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         togglePlay();
     });
 
     video.addEventListener("click", togglePlay);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("events-slider-track");
+    const prevBtn = document.getElementById("slider-prev");
+    const nextBtn = document.getElementById("slider-next");
+    if (track && prevBtn && nextBtn) {
+        // გადასვლის ნაბიჯის გათვლის ფუნქცია
+        const getScrollStep = () => {
+            const card = track.querySelector(".event-card");
+            if (!card) return 300;
+            return card.getBoundingClientRect().width + 30; // ბარათის სიფართე + gap
+        };
+        nextBtn.addEventListener("click", () => {
+            const step = getScrollStep();
+            // მაქსიმალურად შესაძლო მანძილი სქროლისთვის
+            const maxScrollLeft = track.scrollWidth - track.clientWidth;
+            // თუ მარჯვენა კიდეში ვართ (ცდომილება 5px სუბპიქსელზე)
+            if (track.scrollLeft >= maxScrollLeft - 5) {
+                // ვახვევთ თავში
+                track.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+            } else {
+                // სხვაგვარად ვაგრძელებთ გადაფურცვლას
+                track.scrollBy({
+                    left: step,
+                    behavior: "smooth"
+                });
+            }
+        });
+        prevBtn.addEventListener("click", () => {
+            const step = getScrollStep();
+            // თუ სულ თავში ვართ — ვახვევთ ბოლოში
+            if (track.scrollLeft <= 5) {
+                track.scrollTo({
+                    left: track.scrollWidth,
+                    behavior: "smooth"
+                });
+            } else {
+                track.scrollBy({
+                    left: -step,
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
 });
