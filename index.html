@@ -10,45 +10,35 @@
 <body>
 <!-- ქუდი დაბინდული ფონის ეფექტით (Blur) -->
 <header class="header">
-    <div class="container header__wrap">
-        <div class="logo">
-            <img src="images/logo.png" alt="GWC Logo" class="logo__img">
+    <div class="header__wrap">
+        <!-- Логотип -->
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo__img">
             <div class="logo__text">
                 <span class="logo__title">Georgian Worldwide Congress</span>
                 <span class="logo__subtitle">ქართველთა მსოფლიო კონგრესი</span>
             </div>
-        </div>
-        <nav class="navigation">
+        </a>
+
+        <!-- Навигация (обернули в класс header__nav для удобства анимации) -->
+        <nav class="header__nav">
             <ul class="navigation__list">
                 <li><a href="#" class="navigation__link navigation__link--active">მთავარი</a></li>
                 <li><a href="#" class="navigation__link">კონგრესის შესახებ</a></li>
                 <li><a href="#" class="navigation__link">ინიციატივები</a></li>
                 <li><a href="#" class="navigation__link">კონტაქტი</a></li>
             </ul>
-        </nav>
-        <div class="header__right">
-            <!-- Блок соцсетей и языка, который в будущем будет наполняться из админки -->
-            <div class="header__top-bar">
+
+            <!-- Блок, который будет отображаться только в мобильной версии меню -->
+            <div class="header__menu-mobile-meta">
                 <div class="header__socials">
-                    <!-- Ссылки и иконки для динамического вывода -->
-                    <a href="https://facebook.com" class="header__social-link" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://youtube.com" class="header__social-link" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://twitter.com" class="header__social-link" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                    <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
 
-                <!-- Разделитель -->
-                <span class="header__divider">|</span>
-                <!-- Глобус переключения языков с выпадающим списком -->
                 <div class="header__lang">
-                    <button class="header__lang-toggle" aria-label="Language">
-                        <i class="fas fa-globe"></i>
-                    </button>
+                    <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i> ქართული</button>
                     <ul class="header__lang-dropdown">
                         <li><a href="#" class="header__lang-item active">ქართული</a></li>
                         <li><a href="#" class="header__lang-item">English</a></li>
@@ -56,12 +46,37 @@
                     </ul>
                 </div>
             </div>
+        </nav>
 
-            <!-- Твой оригинальный блок с кнопкой войти -->
+        <!-- Правая часть (соцсети, язык, кнопка для десктопов) -->
+        <div class="header__right">
+            <div class="header__top-bar">
+                <div class="header__socials">
+                    <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <span class="header__divider">|</span>
+                <div class="header__lang">
+                    <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i></button>
+                    <ul class="header__lang-dropdown">
+                        <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                        <li><a href="#" class="header__lang-item">English</a></li>
+                        <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="header__action">
                 <a href="#" class="btn btn--outline">შესვლა</a>
             </div>
         </div>
+
+        <!-- Кнопка бургер-меню -->
+        <button class="header__burger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 <main>
@@ -155,5 +170,6 @@
     </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

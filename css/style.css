@@ -22,6 +22,9 @@ body {
     color: var(--color-dark);
     overflow-x: hidden;
 }
+body.no-scroll {
+    overflow: hidden; /* Блокировка скролла при открытом меню */
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -101,10 +104,13 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
+    text-decoration: none;
+    z-index: 1100;
 }
 .logo__img {
     height: 150px;
     width: auto;
+    transition: height 0.3s ease;
 }
 .logo__title {
     display: block;
@@ -118,6 +124,10 @@ body {
     display: block;
     font-size: 0.8rem;
     color: var(--color-muted);
+}
+.header__nav {
+    display: flex;
+    align-items: center;
 }
 .navigation__list {
     display: flex;
@@ -140,7 +150,7 @@ body {
 .header__right {
     display: flex;
     align-items: center;
-    height: 100%;
+    gap: 20px;
 }
 .header__top-bar {
     position: absolute;
@@ -235,6 +245,42 @@ body {
     display: flex;
     align-items: center;
 }
+
+/* Кнопка бургера */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+.header__burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-dark);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+.header__burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.header__burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.header__burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* По умолчанию скрываем мобильные мета-данные на компьютерах */
+.header__menu-mobile-meta {
+    display: none;
+}
+
 /* ==========================================================================
    4. მთავარი ბანერი (HERO-PREMIUM)
    ========================================================================== */
@@ -251,7 +297,6 @@ body {
     padding-top: 170px;
     overflow: hidden;
 }
-/* --- ბანერის კონტეინერი --- */
 .hero-premium__container {
     position: relative;
     z-index: 3;
@@ -264,7 +309,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-/* --- ტექსტური ბლოკი --- */
 .hero-content {
     max-width: 750px;
     margin-top: 40px;
@@ -304,7 +348,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-/* --- აიქონების ბლოკი --- */
 .hero-features {
     display: flex;
     gap: 45px;
@@ -312,7 +355,6 @@ body {
     padding-left: 10px;
     align-self: flex-start;
 }
-/* ელემენტი-ბმული (აიქონი + წარწერა) */
 a.hero-features__item {
     display: flex;
     flex-direction: column;
@@ -324,7 +366,6 @@ a.hero-features__item {
     transition: var(--transition);
     cursor: pointer;
 }
-/* აიქონ-ბმულზე კურსორის მიტანის ეფექტი */
 a.hero-features__item:hover {
     transform: translateY(-5px);
     opacity: 0.85;
@@ -336,7 +377,6 @@ a.hero-features__item:hover {
     align-items: center;
     justify-content: center;
 }
-/* PNG ფოტოების სტილები (აიქონების) */
 .hero-features__img {
     width: 100%;
     height: 100%;
@@ -421,12 +461,130 @@ a.hero-features__item:hover {
 /* ==========================================================================
    7. ადაფტიურობა (MEDIA QUERIES)
    ========================================================================== */
+/* --- Адаптивность хедера под бургер-меню (меньше 1250px) --- */
+@media (max-width: 1250px) {
+    .header__wrap {
+        padding: 15px 24px;
+    }
+    .logo__img {
+        height: 100px;
+    }
+    .header__top-bar {
+        position: static;
+        margin-bottom: 0;
+    }
+    .header__right {
+        margin-right: 45px; /* Отодвигаем кнопку входа от бургера */
+    }
+
+    /* Показываем кнопку бургера */
+    .header__burger {
+        display: flex;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Аккуратная выезжающая шторка вместо полноэкранной */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        max-width: 85%;
+        height: 100vh;
+        background-color: var(--color-white);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+        padding: 120px 40px 40px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1050;
+        overflow: hidden; /* Обрезаем выходящие за рамки элементы */
+    }
+
+    /* Деликатный вертикальный фон с объединенным флагом */
+    .header__nav::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vh;
+        height: 320px;
+        transform: translate(-50%, -50%) rotate(90deg);
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: url('../images/flags/geoeu.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    /* Поднимаем контент меню над флагами */
+    .navigation__list,
+    .header__menu-mobile-meta {
+        position: relative;
+        z-index: 1;
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 100%;
+    }
+    .navigation__link {
+        font-size: 1.1rem;
+    }
+
+    /* Мобильный блок соцсетей и языков */
+    .header__menu-mobile-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        padding-top: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        margin-top: auto;
+    }
+
+    .header__menu-mobile-meta .header__socials {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .header__menu-mobile-meta .header__lang-toggle {
+        font-size: 1rem;
+        font-weight: 600;
+        gap: 8px;
+    }
+
+    .header__menu-mobile-meta .header__lang-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 10px 0 0 10px;
+    }
+}
+
+/* --- Планшеты и мелкие ноутбуки (меньше 1200px) --- */
 @media (max-width: 1200px) {
     .hero-features {
         gap: 40px;
     }
 }
-/* --- [ახალი დიაპაზონი] გამონაკლისად პლანშეტებისთვის (769px-დან 1024px-მდე) --- */
+
+/* --- Ограниченный диапазон для планшетов (от 769px до 1024px) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero-premium {
         height: 100vh;
@@ -450,7 +608,7 @@ a.hero-features__item:hover {
     }
 }
 
-/* --- ყველაფერი რაც 992px-ზე ნაკლებია --- */
+/* --- Экраны меньше 992px --- */
 @media (max-width: 992px) {
     .features__grid {
         grid-template-columns: 1fr;
@@ -466,31 +624,38 @@ a.hero-features__item:hover {
         font-size: 1.6rem;
     }
 }
-/* --- მობილურებისთვის (768px-მდე) --- */
+
+/* --- Мобильные экраны (меньше 768px) --- */
 @media (max-width: 768px) {
-    .header {
-        position: relative;
-    }
     .header__wrap {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px;
-    }
-    .navigation__list {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .logo {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
+        padding: 10px 16px;
     }
     .logo__img {
-        height: 100px;
+        height: 75px;
     }
+    .logo__title {
+        font-size: 0.9rem;
+    }
+    .logo__subtitle {
+        font-size: 0.7rem;
+    }
+    .header__right {
+        display: none; /* Полностью скрываем иконки и кнопку из хедера на мобильных */
+    }
+    .header__burger {
+        right: 16px;
+    }
+
+    /* На мобильных шторка НЕ на весь экран, а аккуратной полосой справа */
+    .header__nav {
+        width: 320px;       /* Фиксированная ширина шторки */
+        max-width: 85%;     /* Чтобы на совсем крошечных экранах она не вылезала за края */
+        padding-top: 100px;
+    }
+
+    /* Настройки баннера */
     .hero-premium {
-        padding-top: 20px;
+        padding-top: 130px; /* Увеличили отступ, чтобы текст гарантированно вылез из-под хедера */
         min-height: 550px;
     }
     .hero-content__title {
@@ -522,8 +687,9 @@ a.hero-features__item:hover {
         letter-spacing: 0.3px;
     }
 }
+
+/* --- Очень мелкие мобилки (меньше 480px) --- */
 @media (max-width: 480px) {
-    /* ძალიან პატარა ეკრანები */
     .hero-features {
         gap: 8px;
         margin-bottom: -5px;
@@ -537,7 +703,8 @@ a.hero-features__item:hover {
         font-size: 0.55rem;
     }
 }
-/* დაყენებები მკაცრად პლანშეტებისთვის 769px-დან 1024px-მდე */
+
+/* --- Строгие фиксы для планшетов в ландшафтной ориентации --- */
 @media (min-width: 768.1px) and (max-width: 1024px) {
     .hero-features {
         gap: 25px !important;
@@ -553,7 +720,8 @@ a.hero-features__item:hover {
         font-size: 0.7rem !important;
     }
 }
-/* ტექსტების კორექტირება ბანერზე მკაცრად დიაპაზონისთვის 992px-დან 1024px-მდე */
+
+/* ---  Корректировки текста на баннере (от 992px до 1024px) --- */
 @media (min-width: 992px) and (max-width: 1024px) {
     .hero-content {
         max-width: 620px !important;
@@ -576,7 +744,8 @@ a.hero-features__item:hover {
         line-height: 1.4 !important;
     }
 }
-/* დაყენებები ლეპტოპების ეკრანებისთვის 1024.1px-დან 1295px-მდე */
+
+/* --- Настройки для мелких ноутбуков (от 1024px до 1295px) --- */
 @media (min-width: 1024.1px) and (max-width: 1295px) {
     .hero-features {
         gap: 30px !important;
