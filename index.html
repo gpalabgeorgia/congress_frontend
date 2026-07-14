@@ -223,22 +223,19 @@
    ========================================================================== -->
     <section class="events-section">
         <div class="events-container">
-            <!-- Заголовок секции -->
+            <!-- სექციის სათაური -->
             <h2 class="events-section-title">ჩვენი ღონისძიებები</h2>
-
             <div class="slider-wrapper">
-                <!-- Стрелка влево -->
+                <!-- მარცხენა ისარი -->
                 <button class="slider-arrow prev-arrow" id="slider-prev" aria-label="Предыдущий слайд">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
                         <polyline points="12 19 5 12 12 5"></polyline>
                     </svg>
                 </button>
-
-                <!-- Окно слайдера -->
+                <!-- სლაიდერის ფანჯარა -->
                 <div class="events-slider-track" id="events-slider-track">
-
-                    <!-- Карточка 1 -->
+                    <!-- ბარათი 1 -->
                     <div class="event-card">
                         <div class="event-card__image-wrapper">
                             <img src="images/events/event-1.jpg" alt="Event 1" class="event-card__image">
@@ -246,8 +243,7 @@
                         <h3 class="event-card__title">ბიზნეს ფორუმი თბილისში</h3>
                         <a href="#" class="event-card__link">დეტალურად →</a>
                     </div>
-
-                    <!-- Карточка 2 -->
+                    <!-- ბარათი 2 -->
                     <div class="event-card">
                         <div class="event-card__image-wrapper">
                             <img src="images/events/event-2.jpg" alt="Event 2" class="event-card__image">
@@ -255,8 +251,7 @@
                         <h3 class="event-card__title">კულტურული მემკვიდრეობის საღამო</h3>
                         <a href="#" class="event-card__link">დეტალურად →</a>
                     </div>
-
-                    <!-- Карточка 3 -->
+                    <!-- ბარათი 3 -->
                     <div class="event-card">
                         <div class="event-card__image-wrapper">
                             <img src="images/events/event-3.jpg" alt="Event 3" class="event-card__image">
@@ -264,8 +259,7 @@
                         <h3 class="event-card__title">საქველმოქმედო გალა ვახშამი</h3>
                         <a href="#" class="event-card__link">დეტალურად →</a>
                     </div>
-
-                    <!-- Карточка 4 -->
+                    <!-- ბარათი 4 -->
                     <div class="event-card">
                         <div class="event-card__image-wrapper">
                             <img src="images/events/event-4.jpg" alt="Event 4" class="event-card__image">
@@ -273,8 +267,7 @@
                         <h3 class="event-card__title">ახალგაზრდული კონგრესი 2026</h3>
                         <a href="#" class="event-card__link">დეტალურად →</a>
                     </div>
-
-                    <!-- Карточка 5 -->
+                    <!-- ბარათი 5 -->
                     <div class="event-card">
                         <div class="event-card__image-wrapper">
                             <img src="images/events/event-5.jpg" alt="Event 5" class="event-card__image">
@@ -282,10 +275,8 @@
                         <h3 class="event-card__title">საინვესტიციო პანელი</h3>
                         <a href="#" class="event-card__link">დეტალურად →</a>
                     </div>
-
                 </div>
-
-                <!-- Стрелка вправо -->
+                <!-- მარჯვენა ისარი -->
                 <button class="slider-arrow next-arrow" id="slider-next" aria-label="Следующий слайд">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -293,6 +284,38 @@
                     </svg>
                 </button>
             </div>
+        </div>
+    </section>
+    <!-- ==========================================================================
+   8. სიახლეების გამოწერა (NEWSLETTER SECTION)
+   ========================================================================== -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <!-- კონვერტის აიქონი -->
+            <div class="newsletter-icon-wrapper">
+                <svg class="newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </div>
+            <!-- სათაურები ქართულად -->
+            <h2 class="newsletter-title">გამოიწერეთ ჩვენი გვერდი ყველა სიახლის მისაღებად</h2>
+            <p class="newsletter-subtitle">
+                გამოიწერეთ ჩვენი გვერდი. შეიყვანეთ თქვენი ელექტრონული ფოსტის მისამართი და მიიღეთ ყველა სიახლე ელექტრონულ ფოსტაზე
+            </p>
+            <!-- გამოწერის ფორმა -->
+            <form class="newsletter-form" id="newsletter-form">
+                <div class="newsletter-input-group">
+                    <input
+                            type="email"
+                            class="newsletter-input"
+                            placeholder="ელექტრონული ფოსტის მისამართი"
+                            required
+                            aria-label="Email address"
+                    >
+                </div>
+                <button type="submit" class="newsletter-btn">გამოწერა</button>
+            </form>
         </div>
     </section>
 </main>
@@ -307,7 +330,13 @@
         </div>
     </div>
 </footer>
-
+<!-- ღილაკი ზემოთ (Back to Top) -->
+<button class="back-to-top" id="backToTopBtn" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
 <script src="js/main.js"></script>
 </body>
 </html>

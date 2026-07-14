@@ -1016,14 +1016,12 @@ a.hero-features__item:hover {
     width: 100%;
     overflow: hidden;
 }
-
 .events-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* Заголовок секции */
+/* სექციის სათაური */
 .events-section-title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -1032,16 +1030,14 @@ a.hero-features__item:hover {
     margin-bottom: 60px;
     letter-spacing: -0.5px;
 }
-
-/* Оболочка слайдера со стрелками */
+/* სლაიდერის გარსი ისრებით */
 .slider-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
-/* Трек слайдера (скролл-контейнер) */
+/* სლაიდერის ტრეკი (სქროლ-კონტეინერი) */
 .events-slider-track {
     display: flex;
     gap: 30px;
@@ -1049,67 +1045,53 @@ a.hero-features__item:hover {
     scroll-behavior: smooth;
     width: 100%;
     padding: 10px 5px;
-
-    /* Скрываем скроллбар в Webkit (Chrome, Safari) */
+    /* ვმალავთ სქროლს Webkit-ში (Chrome, Safari) */
     scrollbar-width: none; /* Firefox */
 }
-
 .events-slider-track::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
 }
-
-/* Карточка мероприятия */
+/* ღონისძიების ბარატი */
 .event-card {
-    flex: 0 0 calc((100% - 60px) / 3); /* Ровно 3 карточки */
+    flex: 0 0 calc((100% - 60px) / 3); /* ზუსტად სამი ბარათი ფოკუსში */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     background-color: #FFFFFF;
-
-    /* Красивая тонкая рамка вокруг всей карточки */
     border: 1px solid #EAEAEA;
     padding: 20px;
-    border-radius: 8px; /* Легкое, современное скругление углов */
-
-    /* Плавный переход для всех эффектов выделения */
+    border-radius: 8px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     cursor: pointer;
 }
-
 .event-card:hover {
-    border-color: #DB1B1B; /* Рамка окрашивается в наш красный */
-    transform: translateY(-6px); /* Карточка изящно приподнимается */
-    box-shadow: 0 12px 30px rgba(219, 27, 27, 0.08); /* Мягкое красное свечение снизу */
+    border-color: #DB1B1B;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(219, 27, 27, 0.08);
 }
-
-/* Контейнер для фото */
+/* კონტეინერი ფოტოსთვის */
 .event-card__image-wrapper {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Ровный квадрат */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     background-color: #F5F5F7;
-    border-radius: 4px; /* Внутреннее скругление для фото */
+    border-radius: 4px;
     margin-bottom: 20px;
 }
-
 .event-card__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-/* Эффект приближения фото при наведении на карточку */
 .event-card:hover .event-card__image {
     transform: scale(1.04);
 }
-
 .event-card:hover .event-card__image-wrapper {
     border-color: #DB1B1B;
 }
-
-/* Название мероприятия под фото */
+/* ღონისძიების სახელი ფოტოს ქვეშ */
 .event-card__title {
     font-size: 1.25rem;
     font-weight: 700;
@@ -1126,25 +1108,22 @@ a.hero-features__item:hover {
 .event-card:hover .event-card__title {
     color: #DB1B1B;
 }
-
-/* Ссылка "Детально" */
+/* ბმული "დეტალურად" */
 .event-card__link {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #111111; /* В обычном состоянии спокойный темный */
+    color: #111111;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    margin-top: auto; /* Прижимает ссылку к низу карточки */
+    margin-top: auto;
     transition: all 0.3s ease;
 }
-
 .event-card:hover .event-card__link {
     color: #DB1B1B;
     transform: translateX(4px);
 }
-
-/* Стилизация стрелок навигации */
+/* ნავიგაციის ისრების სტილიზირება */
 .slider-arrow {
     flex: 0 0 54px;
     height: 54px;
@@ -1159,47 +1138,231 @@ a.hero-features__item:hover {
     transition: all 0.3s ease;
     z-index: 5;
 }
-
 .slider-arrow svg {
     width: 20px;
     height: 20px;
     transition: transform 0.3s ease;
 }
-
-/* Эффект при наведении на стрелки */
+/* ეფექტი ისრებზე კურსორის მიტანისას */
 .slider-arrow:hover {
     border-color: #DB1B1B;
     background-color: #DB1B1B;
     color: #FFFFFF;
 }
-
 .prev-arrow:hover svg {
     transform: translateX(-2px);
 }
-
 .next-arrow:hover svg {
     transform: translateX(2px);
 }
-
-/* Адаптивность */
+/* ადაფტიურობა */
 @media (max-width: 991px) {
     .event-card {
-        flex: 0 0 calc((100% - 30px) / 2); /* 2 карточки на планшетах */
+        flex: 0 0 calc((100% - 30px) / 2);
     }
     .events-section-title {
         font-size: 2rem;
         margin-bottom: 40px;
     }
 }
-
 @media (max-width: 600px) {
     .event-card {
-        flex: 0 0 85%; /* 1 полная карточка + хвостик следующей для свайпа */
+        flex: 0 0 85%;
     }
     .slider-arrow {
-        display: none; /* На мобильных удобнее листать пальцем (свайпом) */
+        display: none;
     }
     .slider-wrapper {
         gap: 0;
+    }
+}
+/* ==========================================================================
+   8. სიახლეების გამოწერა (NEWSLETTER SECTION)
+   ========================================================================== */
+.newsletter-section {
+    padding: 50px 0 120px 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    box-shadow:
+            0 -15px 30px rgba(0, 0, 0, 0.06),
+            0 15px 30px rgba(0, 0, 0, 0.06);
+}
+.newsletter-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.newsletter-icon-wrapper {
+    color: #DB1B1B;
+    margin-bottom: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter-icon {
+    width: 70px;
+    height: 70px;
+    stroke-width: 1.2px;
+}
+.newsletter-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+.newsletter-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555555;
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+.newsletter-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.newsletter-input-group {
+    width: 100%;
+}
+.newsletter-input {
+    width: 100%;
+    height: 54px;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #111111;
+    background-color: #FFFFFF;
+    border: 2px solid #DB1B1B;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.newsletter-input::placeholder {
+    color: #DB1B1B;
+    opacity: 0.7;
+}
+.newsletter-input:focus {
+    box-shadow: 0 0 10px rgba(219, 27, 27, 0.15);
+}
+.newsletter-btn {
+    width: 220px;
+    height: 50px;
+    background-color: #DB1B1B;
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(219, 27, 27, 0.2);
+}
+.newsletter-btn:hover {
+    background-color: #b01212;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(219, 27, 27, 0.3);
+}
+.newsletter-btn:active {
+    transform: translateY(0);
+}
+/* ==========================================
+   ადაფტიურობა
+   ========================================== */
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 60px 0 80px 0;
+    }
+    .newsletter-title {
+        font-size: 1.5rem;
+    }
+    .newsletter-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    .newsletter-icon {
+        width: 55px;
+        height: 55px;
+    }
+    .newsletter-input {
+        height: 50px;
+    }
+    .newsletter-btn {
+        width: 100%;
+    }
+}
+/* ==========================================================================
+   КНОПКА НАВЕРХ (BACK TO TOP BUTTON)
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #DB1B1B;
+    border: 2px solid #DB1B1B;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Поверх всех элементов, включая нашу "плиту" */
+
+    /* Скрыта по умолчанию */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Состояние, когда кнопка становится видимой (навешивается через JS) */
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Ховер эффект: красивый переход в красный цвет */
+.back-to-top:hover {
+    background-color: #DB1B1B;
+    color: #FFFFFF;
+    box-shadow: 0 6px 18px rgba(219, 27, 27, 0.3);
+}
+
+.back-to-top:hover svg {
+    transform: translateY(-2px); /* Стрелочка слегка приподнимается */
+}
+
+/* Адаптивность под мобильные */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
     }
 }
