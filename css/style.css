@@ -1315,11 +1315,26 @@ a.hero-features__item:hover {
     .event-card {
         flex: 0 0 85%;
     }
-    .slider-arrow {
-        display: none;
-    }
     .slider-wrapper {
         gap: 0;
+        position: relative;
+    }
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+    .prev-arrow {
+        left: 5px;
+    }
+    .next-arrow {
+        right: 5px;
     }
 }
 /* ==========================================================================
