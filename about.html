@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgian Worldwide Congress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- ქუდი დაბინდული ფონის ეფექტით (Blur) -->
+    <header class="header">
+        <div class="header__wrap">
+            <!-- ლოგო -->
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Logo" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__title">Georgian Worldwide Congress</span>
+                    <span class="logo__subtitle">ქართველთა მსოფლიო კონგრესი</span>
+                </div>
+            </a>
+            <!-- ნავიგაცია -->
+            <nav class="header__nav">
+                <ul class="navigation__list">
+                    <li><a href="index.html" class="navigation__link navigation__link--active">მთავარი</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="navigation__link dropdown-toggle">კონგრესი</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html" class="dropdown-item">ჩვენს შესახებ</a></li>
+                            <li><a href="#" class="dropdown-item">წესდება</a></li>
+                            <li><a href="#" class="dropdown-item">ოქმები</a></li>
+                            <li><a href="#" class="dropdown-item">პროექტები</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="navigation__link">ინიციატივები</a></li>
+                    <li><a href="#" class="navigation__link">კონტაქტი</a></li>
+                </ul>
+                <!-- ბლოკი, რომელიც გამოსახული იქნება მხოლოდ მენიუს მობილურ ვერსიაში -->
+                <div class="header__menu-mobile-meta">
+                    <div class="header__socials">
+                        <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="header__lang">
+                        <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i> ქართული</button>
+                        <ul class="header__lang-dropdown">
+                            <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                            <li><a href="#" class="header__lang-item">English</a></li>
+                            <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- მარჯვენა ნაწილი (სოც.ქსელები, ენა, ღილაკი დესკტოპებისთვის) -->
+            <div class="header__right">
+                <div class="header__top-bar">
+                    <div class="header__socials">
+                        <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <span class="header__divider">|</span>
+                    <div class="header__lang">
+                        <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i></button>
+                        <ul class="header__lang-dropdown">
+                            <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                            <li><a href="#" class="header__lang-item">English</a></li>
+                            <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__action">
+                    <a href="#" class="btn btn--outline">შესვლა</a>
+                </div>
+            </div>
+            <!-- ბურგერ-მენიუს ღილაკი -->
+            <button class="header__burger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="about-hero__title">ჩვენს შესახებ</h1>
+            <h3 class="about-hero__subtitle">გაიცანით ჩვენი გუნდი. გაიგეთ მეტი ჩვენს შესახებ.</h3>
+        </div>
+        <!-- Скорректированная волна (линия поднята выше) -->
+        <div class="about-hero__wave">
+            <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 C350,140 600,180 900,160 C1200,140 1320,90 1440,110 L1440,200 L0,200 Z" fill="#C51F24"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="about-description">
+        <div class="about-description__content">
+            <p class="about-description__text">
+                ქართველთა მსოფლიო კონგრესი - საერთაშორისო ორგანიზაცია, რომლის მთავარი მიზანი არის ხელი შეუწყოს საქართველოს დემოკრატიული ინსტიტუტების განვითარებას, ქართველი ემიგრანტების თანადგომასა და იურიდიულ, სოციალურ და სხვა ტიპის დახმარებას. ეს ტექსტი არის უბრალოდ მაგალითად ჩასმული, რომელიც დარედაქტირდება მოგვიანებით ადმინისტრატორის მიერ.
+            </p>
+        </div>
+    </section>
+    <section class="about-founding">
+        <div class="about-founding__container">
+            <!-- Левая колонка: Изображение -->
+            <div class="about-founding__image-wrapper">
+                <img src="images/about/young-rand.webp" alt="Our founding" class="about-founding__image">
+            </div>
+
+            <!-- Правая колонка: Текст -->
+            <div class="about-founding__content">
+                <h2 class="about-founding__title">Our founding</h2>
+                <p class="about-founding__text">
+                    Moz was founded by Rand Fishkin and Gillian Muessig in 2004. It was called SEOmoz, and started as a blog and an online community where some of the world's first SEO experts shared their research and ideas. We launched the Beginner's Guide to SEO and our first Search Ranking Factors study, and that hub of industry expertise transformed into a small consulting firm and led us to create some of our first SEO tools.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- ==========================================================================
+   9. ფუტერი
+   ========================================================================== -->
+    <footer class="main-footer">
+        <div class="footer-wave-top">
+            <svg viewBox="0 0 1440 140" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 L0,80 Q720,-35 1440,80 L1440,0 Z" fill="#DB1B1B"/>
+            </svg>
+        </div>
+        <div class="footer-wave-bottom">
+            <svg viewBox="0 0 1440 140" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,140 L0,60 Q720,180 1440,60 L1440,140 Z" fill="#DB1B1B"/>
+            </svg>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-left">
+                    <div class="logo-wrapper">
+                        <img src="images/logo.png" alt="Logo" class="footer-left-logo">
+                        <div class="vertical-divider"></div>
+                    </div>
+                    <div class="copyright-box">
+                        <p class="footer-text">Copyright © 2026</p>
+                    </div>
+                </div>
+                <div class="footer-col footer-col-center">
+                    <h3 class="footer-brand-title">ქართველთა მსოფლიო კონგრესი</h3>
+                    <nav class="footer-nav">
+                        <ul class="footer-nav-list">
+                            <li><a href="#" class="footer-nav-link">მთავარი</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="navigation__link dropdown-toggle">კონგრესი</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="dropdown-item">ჩვენს შესახებ</a></li>
+                                    <li><a href="#" class="dropdown-item">წესდება</a></li>
+                                    <li><a href="#" class="dropdown-item">ოქმები</a></li>
+                                    <li><a href="#" class="dropdown-item">პროექტები</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="footer-nav-link">ინიციატივები</a></li>
+                            <li><a href="#" class="footer-nav-link">კონტაქტი</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col-right">
+                    <div class="placeholder-wrapper">
+                    </div>
+                    <div class="developer-box">
+                        <p class="footer-text">Powered by <a href="#" class="dev-link">GPALAB</a></p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/flags/worldMap.png" alt="World Map" class="footer-bg-map">
+        </div>
+    </footer>
+    <!-- ღილაკი ზემოთ (Back to Top) -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
