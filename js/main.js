@@ -154,3 +154,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const minuteItems = document.querySelectorAll('.minute-item');
+    const pdfFrame = document.getElementById('pdf-frame');
+
+    minuteItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Убираем класс active у всех
+            minuteItems.forEach(el => el.classList.remove('active'));
+
+            // Добавляем active кликнутому элементу
+            this.classList.add('active');
+
+            // Получаем путь к PDF файлу и вставляем его в iframe
+            const pdfUrl = this.getAttribute('data-pdf');
+            if (pdfUrl) {
+                pdfFrame.setAttribute('src', pdfUrl);
+            }
+        });
+    });
+});
