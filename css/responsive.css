@@ -706,3 +706,25 @@
         display: block;
     }
 }
+/* ==========================================================================
+    პროექტები
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .proektebi-container {
+        padding: 0 24px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .top-left { top: -10px; left: -10px; }
+    .top-right { top: -10px; right: -10px; }
+    .bottom-left { bottom: -10px; left: -10px; }
+    .bottom-right { bottom: -10px; right: -10px; }
+}

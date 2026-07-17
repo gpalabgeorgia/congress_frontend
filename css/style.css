@@ -1566,12 +1566,10 @@ a.hero-features__item:hover {
 
 .card-text {
     font-size: 15px;
-    color: #555555;
+    color: #000;
     line-height: 1.6;
     margin: 0;
 }
-
-/* --- УГОЛКИ --- */
 .corner {
     position: absolute;
     width: 25px;
@@ -1580,78 +1578,71 @@ a.hero-features__item:hover {
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 1;
 }
-
 .top-left {
     top: -15px;
     left: -15px;
     border-right: none;
     border-bottom: none;
 }
-
 .top-right {
     top: -15px;
     right: -15px;
     border-left: none;
     border-bottom: none;
 }
-
 .bottom-left {
     bottom: -15px;
     left: -15px;
     border-right: none;
     border-top: none;
 }
-
 .bottom-right {
     bottom: -15px;
     right: -15px;
     border-left: none;
     border-top: none;
 }
-
-/* Эффект наведения */
 .project-card:hover .top-left {
     top: -6px;
     left: -6px;
     border-color: #c51f24;
 }
-
 .project-card:hover .top-right {
     top: -6px;
     right: -6px;
     border-color: #c51f24;
 }
-
 .project-card:hover .bottom-left {
     bottom: -6px;
     left: -6px;
     border-color: #c51f24;
 }
-
 .project-card:hover .bottom-right {
     bottom: -6px;
     right: -6px;
     border-color: #c51f24;
 }
-
-/* Адаптив */
-@media (max-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
+.project-card.flag-card .card-inner {
+    background-image: linear-gradient(rgba(249, 249, 249, 0.6), rgba(249, 249, 249, 0.6)), url('../images/flags/projects-georgia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-@media (max-width: 768px) {
-    .proektebi-container {
-        padding: 0 24px;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    .top-left { top: -10px; left: -10px; }
-    .top-right { top: -10px; right: -10px; }
-    .bottom-left { bottom: -10px; left: -10px; }
-    .bottom-right { bottom: -10px; right: -10px; }
+.project-card.eu-card .card-inner {
+    background-image: linear-gradient(rgba(249, 249, 249, 0.3), rgba(249, 249, 249, 0.3)), url('../images/flags/projects-europe.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project-card.nato-card .card-inner {
+    background-image: linear-gradient(rgba(249, 249, 249, 0.4), rgba(249, 249, 249, 0.4)), url('../images/flags/projects-nato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project-card.all-flags-card .card-inner {
+    background-image: linear-gradient(rgba(249, 249, 249, 0.4), rgba(249, 249, 249, 0.4)), url('../images/flags/projects-all-flags.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
