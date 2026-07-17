@@ -1651,9 +1651,14 @@ a.hero-features__item:hover {
     background-repeat: no-repeat;
 }
 .about-hero.charter-banner {
-    /* Подставь точное имя файла твоей новой картинки */
     background-image: url('../images/banners/charter-banner.png');
-    background-size: cover;      /* Картинка полностью и без дыр заполняет баннер */
-    background-position: center; /* Центрируем, чтобы показать максимум деталей */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.about-hero.about-main-banner {
+    background-image: url('../images/banners/about-banner.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
