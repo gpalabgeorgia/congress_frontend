@@ -1662,3 +1662,63 @@ a.hero-features__item:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
+/* ==========================================================================
+    პროექტები (მეორე სექცია)
+   ========================================================================== */
+.projects-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+/* Блок-контейнер делаем относительным */
+.projects-header-block{
+    background:url("../images/banners/projects-block.png") center center no-repeat;
+    background-size:cover;
+    min-height:420px;
+    display:flex;
+    align-items:center;
+}
+/* Картинка прижата строго к верхнему краю блока и занимает 100% ширины */
+.projects-header-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+/* Контейнер с текстом поверх картинки */
+.projects-header-block .container {
+    position: relative;
+    z-index: 2;
+    margin-left: 0;
+    padding-left: 40px;
+    max-width: 650px;
+    /* Управляет вертикальным положением текста относительно картинки */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.projects-section__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+.projects-section__title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50%;
+    height: 3px;
+    background-color: #C51F24;
+}
+.projects-section__text {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+}
