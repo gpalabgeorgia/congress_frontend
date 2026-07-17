@@ -1708,6 +1708,7 @@ a.hero-features__item:hover {
     position: relative;
     display: inline-block;
 }
+
 .projects-section__title::after {
     content: '';
     position: absolute;
@@ -1717,8 +1718,195 @@ a.hero-features__item:hover {
     height: 3px;
     background-color: #C51F24;
 }
+
 .projects-section__text {
     font-size: 16px;
     color: #333333;
     line-height: 1.5;
+}
+/* ==========================================================================
+   УНИКАЛЬНАЯ СЕТКА ТОЛЬКО ДЛЯ ВТОРОЙ ЧАСТИ (ПЕРВАЯ В ПОЛНОЙ БЕЗОПАСНОСТИ)
+   ========================================================================== */
+.projects-grid-block {
+    margin-top: 60px; /* Отодвигает сетку проектов вниз от верхних блоков */
+}
+/* Новое уникальное имя сетки для второй части, чтобы не ломать верхнюю */
+.projects-actual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Строго 3 карточки в ряд */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Карточка проекта: строго 425px шириной и 355px высотой */
+.project-item-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    width: 100%;
+    max-width: 425px;
+    height: 355px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.project-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Картинка */
+.project-item-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 165px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.project-item-img-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.project-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Текст */
+.project-item-content {
+    padding: 16px 24px;
+    flex-grow: 1;
+    margin-bottom: 55px;
+    overflow: hidden;
+}
+
+.project-item-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.project-item-text {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Футер */
+.project-item-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 24px 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.project-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+}
+
+.project-item-date {
+    color: #888888;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-item-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3CD16A;
+    font-weight: 500;
+}
+
+.project-item-status--active::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #3CD16A;
+    border-radius: 50%;
+}
+
+.project-item-link {
+    font-size: 13px;
+    color: #C51F24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Кнопка */
+.projects-more-action {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+/* ==========================================================================
+   КНОПКА И ОТСТУПЫ СНИЗУ
+   ========================================================================== */
+.projects-more-action {
+    text-align: center;
+    margin-top: 40px;     /* Отступ сверху от карточек до кнопки */
+    margin-bottom: 50px;  /* Уменьшенный, аккуратный зазор до футера сайта */
+}
+
+.btn-view-all {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid #C51F24; /* Четкая красная рамка */
+    border-radius: 50px;       /* Округлые края */
+    color: #C51F24;            /* Красный текст */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении */
+.btn-view-all:hover {
+    background: #C51F24;       /* Кнопка заливается красным */
+    color: #ffffff;            /* Текст становится белым */
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+    .projects-actual-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .projects-actual-grid {
+        grid-template-columns: 1fr;
+    }
 }
