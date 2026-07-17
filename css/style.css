@@ -1487,24 +1487,21 @@ a.hero-features__item:hover {
 /* ==========================================================================
     პროექტები (პირველი სექცია)
    ========================================================================== */
-/* --- СЕКЦИЯ ПРОЕКТОВ --- */
 .proektebi-section {
     width: 100%;
-    padding: 100px 0 120px 0; /* Жирные отступы сверху и снизу, чтобы контент не забивался под шапку и футер */
+    padding: 100px 0 120px 0;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
 }
-
 .proektebi-container {
     width: 100%;
     max-width: 1600px;
     padding: 0 40px;
     box-sizing: border-box;
 }
-
 .proektebi-title {
     font-size: 32px;
     color: #c51f24;
@@ -1512,8 +1509,6 @@ a.hero-features__item:hover {
     margin-top: 0;
     margin-bottom: 60px;
 }
-
-/* --- СЕТКА --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1521,17 +1516,14 @@ a.hero-features__item:hover {
     width: 100%;
     box-sizing: border-box;
 }
-
-/* --- КАРТОЧКА --- */
 .project-card {
     position: relative;
     background: transparent;
     display: flex;
     flex-direction: column;
 }
-
 .card-inner {
-    background-color: #f9f9f9; /* Серый фон как на твоем скриншоте */
+    background-color: #f9f9f9;
     padding: 40px 30px;
     min-height: 280px;
     display: flex;
@@ -1646,11 +1638,15 @@ a.hero-features__item:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
-/* Поднимаем карту Грузии чуть выше */
 .about-hero.projects-banner {
     background-image: url('../images/banners/projects-banner.png');
     background-size: cover;
-    /* Первое значение (left) держит левый край, второе (-30px) смещает картинку вверх */
     background-position: left -30px;
+    background-repeat: no-repeat;
+}
+.about-hero.protocol-banner {
+    background-image: url('../images/banners/protocol-banner.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
