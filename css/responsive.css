@@ -779,3 +779,19 @@
         font-size: 26px;
     }
 }
+@media(max-width:1200px){
+    .support-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .support-grid{
+        grid-template-columns:1fr;
+    }
+    .section-heading__title{
+        font-size:36px;
+    }
+    .business-support{
+        padding:70px 0;
+    }
+}

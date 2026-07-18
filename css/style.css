@@ -1973,3 +1973,178 @@ a.hero-features__item:hover {
     color: #222222;
     line-height: 1.4;
 }
+/* ======================================================
+   BUSINESS HUB
+====================================================== */
+.business-support{
+    position:relative;
+    padding:110px 0;
+    overflow:hidden;
+    background:
+            url("../images/business-hub/business-bg2.png") center top no-repeat,
+            linear-gradient(180deg,#ffffff 0%,#fafafa 100%);
+    background-size:cover;
+}
+.business-support::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    height:3px;
+    border-radius:50px;
+    background: rgba(197, 31, 36, 0.3);
+}
+/* ======================================================
+   HEADER
+====================================================== */
+.section-heading{
+    max-width:720px;
+    margin-bottom:70px;
+}
+.section-heading__subtitle{
+    display:inline-block;
+    font-size:14px;
+    font-weight:700;
+    color:#C51F24;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+.section-heading__title{
+    font-size:48px;
+    font-weight:700;
+    color:#2d3648;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+.section-heading__title::after{
+    content:"";
+    display:block;
+    width:85px;
+    height:4px;
+    margin-top:18px;
+    background:#C51F24;
+}
+.section-heading__text{
+    font-size:18px;
+    color:#5d6675;
+    line-height:1.8;
+    max-width:650px;
+}
+/* ======================================================
+   GRID
+====================================================== */
+.support-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+/* ======================================================
+   CARD
+====================================================== */
+.support-card{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border-radius:22px;
+    padding:34px;
+    min-height:260px;
+    box-shadow:
+            0 15px 35px rgba(0,0,0,.06);
+    transition:.35s;
+}
+.support-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+            0 25px 45px rgba(0,0,0,.12);
+}
+/* ======================================================
+   CARD BACKGROUND
+====================================================== */
+.support-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-position:right center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    opacity:1;
+    z-index:0;
+}
+/* ======================================================
+   მთელი შემცველობა ფონის ზემოდან
+====================================================== */
+.support-card>*{
+    position:relative;
+    z-index:2;
+}
+/* ======================================================
+   ICON
+====================================================== */
+.support-card__icon{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+    background:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+            0 10px 30px rgba(0,0,0,.08);
+    margin-bottom:28px;
+}
+.support-card__icon img{
+    width:98px;
+    height:auto;
+}
+/* ======================================================
+   TITLE
+====================================================== */
+.support-card h3{
+    font-size:28px;
+    font-weight:700;
+    color:#2f3645;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+/* ======================================================
+   RED LINE
+====================================================== */
+.support-card__line{
+    display:block;
+    width:55px;
+    height:4px;
+    background:#C51F24;
+    margin-bottom:22px;
+}
+/* ======================================================
+   TEXT
+====================================================== */
+.support-card p{
+    font-size:16px;
+    color:#616978;
+    line-height:1.8;
+}
+/* ======================================================
+   BACKGROUND OF EACH CARD
+====================================================== */
+.card-partners::before{
+    background-image:url("../images/business-hub/block1-bg.png");
+}
+.card-world::before{
+    background-image:url("../images/business-hub/block2-bg.png");
+}
+.card-growth::before{
+    background-image:url("../images/business-hub/block3-bg.png");
+}
+.card-consulting::before{
+    background-image:url("../images/business-hub/block4-bg.png");
+}
+.card-startup::before{
+    background-image:url("../images/business-hub/block5-bg.png");
+}
+.card-investment::before{
+    background-image:url("../images/business-hub/block6-bg.png");
+}
