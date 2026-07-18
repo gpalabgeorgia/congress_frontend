@@ -1670,7 +1670,6 @@ a.hero-features__item:hover {
     padding-top: 0;
     padding-bottom: 60px;
 }
-/* Блок-контейнер делаем относительным */
 .projects-header-block{
     background:url("../images/banners/projects-block.png") center center no-repeat;
     background-size:cover;
@@ -1678,7 +1677,6 @@ a.hero-features__item:hover {
     display:flex;
     align-items:center;
 }
-/* Картинка прижата строго к верхнему краю блока и занимает 100% ширины */
 .projects-header-bg-img {
     width: 100%;
     height: auto;
@@ -1689,14 +1687,12 @@ a.hero-features__item:hover {
     z-index: 1;
     pointer-events: none;
 }
-/* Контейнер с текстом поверх картинки */
 .projects-header-block .container {
     position: relative;
     z-index: 2;
     margin-left: 0;
     padding-left: 40px;
     max-width: 650px;
-    /* Управляет вертикальным положением текста относительно картинки */
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -1708,7 +1704,6 @@ a.hero-features__item:hover {
     position: relative;
     display: inline-block;
 }
-
 .projects-section__title::after {
     content: '';
     position: absolute;
@@ -1718,27 +1713,23 @@ a.hero-features__item:hover {
     height: 3px;
     background-color: #C51F24;
 }
-
 .projects-section__text {
     font-size: 16px;
     color: #333333;
     line-height: 1.5;
 }
 /* ==========================================================================
-   УНИКАЛЬНАЯ СЕТКА ТОЛЬКО ДЛЯ ВТОРОЙ ЧАСТИ (ПЕРВАЯ В ПОЛНОЙ БЕЗОПАСНОСТИ)
+   უნიკალური ბადე მხოლოდ მეორე ნაწილისთვის
    ========================================================================== */
 .projects-grid-block {
-    margin-top: 60px; /* Отодвигает сетку проектов вниз от верхних блоков */
+    margin-top: 60px;
 }
-/* Новое уникальное имя сетки для второй части, чтобы не ломать верхнюю */
 .projects-actual-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Строго 3 карточки в ряд */
     gap: 30px;
     margin-bottom: 40px;
 }
-
-/* Карточка проекта: строго 425px шириной и 355px высотой */
 .project-item-card {
     background: #ffffff;
     border-radius: 16px;
@@ -1747,7 +1738,6 @@ a.hero-features__item:hover {
     flex-direction: column;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
     width: 100%;
     max-width: 425px;
     height: 355px;
@@ -1755,13 +1745,10 @@ a.hero-features__item:hover {
     box-sizing: border-box;
     margin: 0 auto;
 }
-
 .project-item-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
-
-/* Картинка */
 .project-item-img-wrap {
     position: relative;
     width: 100%;
@@ -1769,7 +1756,6 @@ a.hero-features__item:hover {
     flex-shrink: 0;
     overflow: hidden;
 }
-
 .project-item-img-wrap::after {
     content: '';
     position: absolute;
@@ -1780,21 +1766,17 @@ a.hero-features__item:hover {
     background: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
 }
-
 .project-item-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-/* Текст */
 .project-item-content {
     padding: 16px 24px;
     flex-grow: 1;
     margin-bottom: 55px;
     overflow: hidden;
 }
-
 .project-item-title {
     font-size: 17px;
     font-weight: bold;
@@ -1802,7 +1784,6 @@ a.hero-features__item:hover {
     margin-bottom: 6px;
     line-height: 1.4;
 }
-
 .project-item-text {
     font-size: 13px;
     color: #666666;
@@ -1812,8 +1793,6 @@ a.hero-features__item:hover {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-/* Футер */
 .project-item-footer {
     position: absolute;
     bottom: 0;
@@ -1826,21 +1805,18 @@ a.hero-features__item:hover {
     background: #ffffff;
     box-sizing: border-box;
 }
-
 .project-item-meta {
     display: flex;
     align-items: center;
     gap: 16px;
     font-size: 13px;
 }
-
 .project-item-date {
     color: #888888;
     display: inline-flex;
     align-items: center;
     gap: 6px;
 }
-
 .project-item-status {
     display: inline-flex;
     align-items: center;
@@ -1848,7 +1824,6 @@ a.hero-features__item:hover {
     color: #3CD16A;
     font-weight: 500;
 }
-
 .project-item-status--active::before {
     content: '';
     display: inline-block;
@@ -1857,56 +1832,144 @@ a.hero-features__item:hover {
     background-color: #3CD16A;
     border-radius: 50%;
 }
-
 .project-item-link {
     font-size: 13px;
     color: #C51F24;
     text-decoration: none;
     font-weight: bold;
 }
-
-/* Кнопка */
+/* ღილაკი */
 .projects-more-action {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 90px;
 }
 /* ==========================================================================
-   КНОПКА И ОТСТУПЫ СНИЗУ
+   ღილაკი და მისი დაცილებები
    ========================================================================== */
 .projects-more-action {
     text-align: center;
-    margin-top: 40px;     /* Отступ сверху от карточек до кнопки */
-    margin-bottom: 50px;  /* Уменьшенный, аккуратный зазор до футера сайта */
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
-
 .btn-view-all {
     display: inline-block;
     padding: 12px 35px;
-    border: 2px solid #C51F24; /* Четкая красная рамка */
-    border-radius: 50px;       /* Округлые края */
-    color: #C51F24;            /* Красный текст */
+    border: 2px solid #C51F24;
+    border-radius: 50px;
+    color: #C51F24;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
-
-/* Эффект при наведении */
 .btn-view-all:hover {
-    background: #C51F24;       /* Кнопка заливается красным */
-    color: #ffffff;            /* Текст становится белым */
+    background: #C51F24;
+    color: #ffffff;
 }
-
-/* Адаптив */
-@media (max-width: 992px) {
-    .projects-actual-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.about-hero.hub-main-banner {
+    background-image: url('../images/banners/hub-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-@media (max-width: 650px) {
-    .projects-actual-grid {
-        grid-template-columns: 1fr;
-    }
+/* ==========================================================================
+   სექცია: ბიზნეს-ჰაბის შესახებ
+   ========================================================================== */
+.business-hub-page {
+    background-color: #fcfcfc;
+}
+.hub-about-section {
+    width: 100%;
+    position: relative;
+    background-image: url('../images/business-hub/business-bg1.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+.hub-about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hub-about-content {
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+.hub-about-media {
+    width: 50%;
+}
+.hub-about-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #C51F24;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.hub-about-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 16px;
+    background-color: #C51F24;
+}
+.hub-about-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1e2530;
+    margin: 0 0 15px 0;
+}
+.hub-about-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #C51F24;
+    margin-bottom: 30px;
+}
+.hub-about-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e2530;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+.hub-about-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 30px;
+}
+.hub-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.hub-feature-icon {
+    width: 46px;
+    height: 46px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.hub-feature-icon i {
+    font-size: 18px;
+    color: #C51F24;
+}
+.hub-feature-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222222;
+    line-height: 1.4;
 }

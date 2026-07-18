@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgian Worldwide Congress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!-- ქუდი დაბინდული ფონის ეფექტით (Blur) -->
+<header class="header">
+    <div class="header__wrap">
+        <!-- ლოგო -->
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo__img">
+            <div class="logo__text">
+                <span class="logo__title">Georgian Worldwide Congress</span>
+                <span class="logo__subtitle">ქართველთა მსოფლიო კონგრესი</span>
+            </div>
+        </a>
+        <!-- ნავიგაცია -->
+        <nav class="header__nav">
+            <ul class="navigation__list">
+                <li><a href="index.html" class="navigation__link navigation__link--active">მთავარი</a></li>
+                <li class="dropdown">
+                    <a href="#" class="navigation__link dropdown-toggle">ჩვენს შესახებ</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" class="dropdown-item">კონგრესი</a></li>
+                        <li><a href="charter.html" class="dropdown-item">წესდება</a></li>
+                        <li><a href="protocols.html" class="dropdown-item">ოქმები</a></li>
+                        <li><a href="projects.html" class="dropdown-item">პროექტები</a></li>
+                    </ul>
+                </li>
+                <li><a href="business-hub.html" class="navigation__link">ბიზნეს-ჰაბი</a></li>
+                <li><a href="contact" class="navigation__link">კონტაქტი</a></li>
+            </ul>
+            <!-- ბლოკი, რომელიც გამოსახული იქნება მხოლოდ მენიუს მობილურ ვერსიაში -->
+            <div class="header__menu-mobile-meta">
+                <div class="header__socials">
+                    <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="header__lang">
+                    <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i> ქართული</button>
+                    <ul class="header__lang-dropdown">
+                        <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                        <li><a href="#" class="header__lang-item">English</a></li>
+                        <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- მარჯვენა ნაწილი (სოც.ქსელები, ენა, ღილაკი დესკტოპებისთვის) -->
+        <div class="header__right">
+            <div class="header__top-bar">
+                <div class="header__socials">
+                    <a href="https://facebook.com" class="header__social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" class="header__social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" class="header__social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <span class="header__divider">|</span>
+                <div class="header__lang">
+                    <button class="header__lang-toggle" aria-label="Language"><i class="fas fa-globe"></i></button>
+                    <ul class="header__lang-dropdown">
+                        <li><a href="#" class="header__lang-item active">ქართული</a></li>
+                        <li><a href="#" class="header__lang-item">English</a></li>
+                        <li><a href="#" class="header__lang-item">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__action">
+                <a href="#" class="btn btn--outline">შესვლა</a>
+            </div>
+        </div>
+        <!-- ბურგერ-მენიუს ღილაკი -->
+        <button class="header__burger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+<main>
+    <section class="about-hero hub-main-banner">
+        <div class="container">
+            <h1 class="about-hero__title">ბიზნეს-ჰაბი</h1>
+            <h3 class="about-hero__subtitle">ახალი კავშირები. ახალი შესაძლებლობები</h3>
+        </div>
+        <div class="about-hero__wave">
+            <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 C350,140 600,180 900,160 C1200,140 1320,90 1440,110 L1440,200 L0,200 Z" fill="rgba(197, 31, 36, 0.6)"></path>
+            </svg>
+        </div>
+    </section>
+    <!-- სექცია: რა არის Business Hub -->
+    <section class="hub-about-section">
+        <div class="container">
+            <div class="hub-about-wrapper">
+                <div class="hub-about-content">
+                    <span class="hub-about-subtitle">ბიზნეს-ჰაბი</span>
+                    <h2 class="hub-about-title">რა არის Business Hub</h2>
+                    <div class="hub-about-divider"></div>
+                    <p class="hub-about-text">
+                        Business Hub არის სივრცე, სადაც ბიზნეს იდეა გარდაიქმნება შესაძლებლობად. ჩვენ ვაერთიანებთ პროგრამებს, რესურსებს, ექსპერტებს და პარტნიორებს, რათა მხარი დავუჭიროთ თქვენი ბიზნესის განვითარებას, ახალი კონტაქტების დამყარებასა და საერთაშორისო ბაზრებზე გასვლას.
+                    </p>
+                    <div class="hub-about-features">
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <span class="hub-feature-text">ბიზნესის განვითარება</span>
+                        </div>
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="hub-feature-text">ექსპერტთა ქსელი</span>
+                        </div>
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <span class="hub-feature-text">საერთაშორისო კონტაქტები</span>
+                        </div>
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <span class="hub-feature-text">პროფესიონალური კონსულტაციები</span>
+                        </div>
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="hub-feature-text">ინვესტიციები და დაფინანსება</span>
+                        </div>
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span class="hub-feature-text">ინოვაციები და ახალი შესაძლებლობები</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hub-about-media"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<button class="back-to-top" id="backToTopBtn" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
