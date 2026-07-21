@@ -2148,3 +2148,129 @@ a.hero-features__item:hover {
 .card-investment::before{
     background-image:url("../images/business-hub/block6-bg.png");
 }
+/*======================================
+            PROCESS
+======================================*/
+.steps-sec-block {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    padding: 80px 24px 160px 24px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-image:
+            url('../images/business-hub/business-bg3.png');
+    background-position: top center, bottom center;
+    background-size: 100% auto, 100% auto;
+    background-repeat: no-repeat, no-repeat;
+}
+.steps-sec-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+.steps-sec-header {
+    max-width: 500px;
+    margin-bottom: 64px;
+    text-align: left;
+}
+.steps-sec-category {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #ff3333;
+}
+.steps-sec-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f1d3a;
+    margin: 8px 0 16px 0;
+    line-height: 1.2;
+}
+.steps-sec-underline {
+    width: 64px;
+    height: 4px;
+    background-color: #ff3333;
+    margin-bottom: 24px;
+}
+.steps-sec-description {
+    font-size: 14px;
+    color: #5c6b73;
+    line-height: 1.6;
+    margin: 0;
+}
+/* ==========================================================================
+      სექცია ეტაპები ხაზებზე
+   ========================================================================== */
+.steps-sec,
+section[class*="steps"] {
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    padding-top: 60px !important;
+    padding-bottom: 80px !important;
+    box-sizing: border-box;
+}
+.steps-sec-content-wrapper {
+    position: relative;
+    margin-top: 64px;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 80' fill='none'%3E%3Cpath d='M0,40 Q125,80 250,40 T500,40 T750,40 T1000,40' stroke='%23ff3333' stroke-width='1.5' stroke-dasharray='6 4' stroke-opacity='0.8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 80px;
+    background-position: center 24px;
+    overflow: visible !important;
+}
+.steps-sec-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.steps-sec-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+}
+.steps-sec-icon-box {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 3;
+    transition: filter 0.3s ease;
+}
+.steps-sec-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+.steps-sec-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f1d3a;
+    margin: 0 0 12px 0;
+}
+.steps-sec-text {
+    font-size: 12px;
+    color: #5c6b73;
+    line-height: 1.6;
+    max-width: 170px;
+    margin: 0;
+}
+.steps-sec-item:hover .steps-sec-icon-box {
+    filter: drop-shadow(0 0 15px rgba(255, 51, 51, 0.6));
+}
