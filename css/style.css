@@ -2274,3 +2274,244 @@ section[class*="steps"] {
 .steps-sec-item:hover .steps-sec-icon-box {
     filter: drop-shadow(0 0 15px rgba(255, 51, 51, 0.6));
 }
+/* ==========================================================================
+   СЕКЦИЯ: ИСТОРИИ УСПЕХА (ДЕСКТОП)
+   ========================================================================== */
+/* ==========================================================================
+   СЕКЦИЯ: ИСТОРИИ УСПЕХА (ТОЛЬКО ФОТО И КУБОК)
+   ========================================================================== */
+.success-stories-sec {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    background-image: url('../images/business-hub/business-bg4.png');
+    background-size: 100% 100%;          /* Растягиваем на всю секцию без пустот */
+    background-position: right bottom;   /* Кубок и пьедесталы всегда прижаты вправо */
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   ЗАГОЛОВОК И ТЕКСТ
+   ========================================================================== */
+
+/* Изменяем ТОЛЬКО блок текста */
+.stories-header {
+    margin-left: 0;
+    /* Первое значение: влево (-30px), второе значение: вверх (-25px) */
+    transform: translate(-30px, -25px);
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 50px;
+}
+
+/* Красный подзаголовок */
+.stories-subtitle {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #e62e2e !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+/* Заголовок */
+.stories-title {
+    font-size: 38px;
+    line-height: 1.6 !important;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 20px 0;
+}
+
+/* СТРЕЛКА ВПРАВО */
+.title-underline {
+    position: relative;
+    display: inline-block;
+    color: #1a1a1a;
+}
+
+.title-underline::after {
+    content: '' !important;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 6px !important;
+    background-color: #e62e2e !important;
+    display: block !important;
+    border-radius: 3px;
+}
+
+.title-underline::before {
+    content: '' !important;
+    position: absolute;
+    right: -8px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #e62e2e;
+    display: block !important;
+    transform: translateY(5px);
+}
+
+/* СТРЕЛКА ВЛЕВО */
+.title-underline-second {
+    position: relative;
+    display: inline-block;
+    color: #1a1a1a;
+}
+
+.title-underline-second::after {
+    content: '' !important;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 6px !important;
+    background-color: #e62e2e !important;
+    display: block !important;
+    border-radius: 3px;
+}
+
+.title-underline-second::before {
+    content: '' !important;
+    position: absolute;
+    left: -8px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #e62e2e;
+    display: block !important;
+    transform: translateY(5px);
+}
+
+/* Описание */
+.stories-desc {
+    font-size: 14px;
+    line-height: 1.65 !important;
+    color: #555555;
+    margin: 0;
+}
+
+.desc-highlight {
+    color: #e62e2e !important;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   КНОПКА
+   ========================================================================== */
+
+.stories-btn-wrapper {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.stories-btn,
+a.stories-btn {
+    display: inline-block;
+    background-color: #d92b2b;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(217, 43, 43, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.stories-btn:hover {
+    background-color: #b82222;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   АДАПТИВ
+   ========================================================================== */
+
+/* --- ПЛАНШЕТЫ (до 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .stories-header {
+        max-width: 50%;
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+
+    /* Раздвигаем строки заголовка, чтобы не липли */
+    .stories-title {
+        font-size: 26px;
+        line-height: 1.8 !important;
+        margin-bottom: 25px;
+    }
+
+    .stories-subtitle {
+        margin-bottom: 16px;
+    }
+}
+
+/* --- МОБИЛЬНЫЕ (до 768px) --- */
+@media screen and (max-width: 768px) {
+    .stories-header {
+        max-width: 58%;
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+
+    /* Увеличиваем межстрочный интервал и опускаем заголовок */
+    .stories-title {
+        font-size: 18px;
+        line-height: 1.9 !important; /* Больше воздуха между строками */
+        margin-bottom: 25px;
+    }
+
+    .stories-subtitle {
+        margin-bottom: 12px;
+    }
+
+    .stories-desc {
+        font-size: 11px;
+        line-height: 1.4 !important;
+    }
+
+    /* ==========================================================================
+       ПОЛНОЕ ИСПРАВЛЕНИЕ СТРЕЛОК ТОЛЬКО ДЛЯ МОБИЛОК (Равнение линий)
+       ========================================================================== */
+
+    /* Убираем десктопное выравнивание, чтобы оно не мешало */
+    .title-underline::before,
+    .title-underline-second::before,
+    .title-underline::after,
+    .title-underline-second::after {
+        transform: none !important;
+    }
+
+    /* --- Линии 4px (::after) --- */
+    /* Опускаем их вниз, чтобы наконечники попали в них */
+    .title-underline::after,
+    .title-underline-second::after {
+        height: 4px !important;
+        bottom: -4px !important; /* Линии опущены вниз */
+    }
+
+    /* --- Наконечники (::before) --- */
+    /* Опускаем их вниз так, чтобы их центр совпал с центром 4px линии */
+    .title-underline::before,
+    .title-underline-second::before {
+        bottom: -8px !important; /* Наконечники опущены */
+        top: auto !important;
+        /* Выравниваем: 4px линия / 2 = 2px. Поднимаем на 2px от нижнего края */
+        transform: translateY(2px) !important;
+    }
+}
